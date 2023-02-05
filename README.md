@@ -10,3 +10,6 @@
  3. Input your confidence interval in decimal form. Wanting to be 90% confident would be .9.
  4. Input your levels for each promotion.
  5. Click the "Update Stats" button.
+
+# Credits
+ - Thanks to https://github.com/thisancog/statistics.js for the mathematical functions that this tool runs on.
