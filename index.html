@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>FE Averages Calculator</title>
+	<link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+	<header>
+		<script src="statistics.min.js" type="text/javascript"></script>
+		<script src="script.js" defer></script>
+
+		<div id="stars"></div>
+		<div id="stars2"></div>
+		<div id="stars3"></div>
+	</header>
+
+	<main>
+		<h1>Bases</h1>
+		<section>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="255" min="1" step="1" id="hpbase" name="hpbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="strbase" name="strbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="magbase" name="magbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="dexbase" name="dexbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="spdbase" name="spdbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="defbase" name="defbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="resbase" name="resbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="lckbase" name="lckbase" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="bldbase" name="bldbase" value=1></th>
+				</tr>
+			</table>
+			<h2>Promotion 1 Gains</h2>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="255" min="1" step="1" id="hppromo1" name="hppromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="strpromo1" name="strpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="magpromo1" name="magpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="dexpromo1" name="dexpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="spdpromo1" name="spdpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="defpromo1" name="defpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="respromo1" name="respromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="lckpromo1" name="lckpromo1" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="bldpromo1" name="bldpromo1" value=1></th>
+				</tr>
+			</table>
+			<h2>Promotion 2 Gains</h2>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="255" min="1" step="1" id="hppromo2" name="hppromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="strpromo2" name="strpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="magpromo2" name="magpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="dexpromo2" name="dexpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="spdpromo2" name="spdpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="defpromo2" name="defpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="respromo2" name="respromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="lckpromo2" name="lckpromo2" value=1></th>
+					<th><input type="number" max="255" min="1" step="1" id="bldpromo2" name="bldpromo2" value=1></th>
+				</tr>
+			</table>
+		</section>
+		<h1>Growths</h1>
+		<section>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="1" min="0" step="0.01" id="hpgrowth" name="hpgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="strgrowth" name="strgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="maggrowth" name="maggrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="dexgrowth" name="dexgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="spdgrowth" name="spdgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="defgrowth" name="defgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="resgrowth" name="resgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="lckgrowth" name="lckgrowth" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="bldgrowth" name="bldgrowth" value=0.5></th>
+				</tr>
+			</table>
+			<h2>Promotion 1 Growths</h2>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="1" min="0" step="0.01" id="hpgrowth1" name="hpgrowth1" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="strgrowth1" name="strgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="maggrowth1" name="maggrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="dexgrowth1" name="dexgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="spdgrowth1" name="spdgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="defgrowth1" name="defgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="resgrowth1" name="resgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="lckgrowth1" name="lckgrowth1" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="bldgrowth1" name="bldgrowth1" value=0.5>
+					</th>
+				</tr>
+			</table>
+			<h2>Promotion 2 Growths</h2>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="1" min="0" step="0.01" id="hpgrowth2" name="hpgrowth2" value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="strgrowth2" name="strgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="maggrowth2" name="maggrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="dexgrowth2" name="dexgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="spdgrowth2" name="spdgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="defgrowth2" name="defgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="resgrowth2" name="resgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="lckgrowth2" name="lckgrowth2" value=0.5>
+					</th>
+					<th><input type="number" max="1" min="0" step="0.01" id="bldgrowth2" name="bldgrowth2" value=0.5>
+					</th>
+				</tr>
+			</table>
+		</section>
+		<h1>Confidence</h1>
+		<section>
+			<table>
+				<tr>
+					<th>HP</th>
+					<th>Str</th>
+					<th>Mag</th>
+					<th>Dex</th>
+					<th>Spd</th>
+					<th>Def</th>
+					<th>Res</th>
+					<th>Lck</th>
+					<th>Bld</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="1" min="0" step="0.01" id="hpconfidence" name="hpconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="strconfidence" name="strconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="magconfidence" name="magconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="dexconfidence" name="dexconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="spdconfidence" name="spdconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="defconfidence" name="defconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="resconfidence" name="resconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="lckconfidence" name="lckconfidence"
+							value=0.5></th>
+					<th><input type="number" max="1" min="0" step="0.01" id="bldconfidence" name="bldconfidence"
+							value=0.5></th>
+				</tr>
+			</table>
+		</section>
+		<h1>Other Stats</h1>
+		<section>
+			<table>
+				<tr>
+					<th>Level</th>
+					<th>Promotion Level 1</th>
+					<th>Promotion Level 2</th>
+					<th>Final Level</th>
+				</tr>
+				<tr>
+					<th><input type="number" max="99" min="0" step="1" id="level" name="level" value=1></th>
+					<th><input type="number" max="99" min="0" step="1" id="promotionLevel1" name="promotionLevel1"
+							value=20></th>
+					<th><input type="number" max="99" min="0" step="1" id="promotionLevel2" name="promotionLevel2"
+							value=20></th>
+					<th><input type="number" max="99" min="0" step="1" id="finalLevel" name="finalLevel" value=20></th>
+				</tr>
+			</table>
+		</section>
+		<button onClick="updateStats();" type="button">Update Stats</button>
+	</main>
+
+	<footer>
+
+	</footer>
+</body>
+
+</html>
