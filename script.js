@@ -270,3 +270,15 @@ function createTable(tableData) {
 	table.appendChild(tableBody);
 	document.body.appendChild(table);
 }
+
+function copyGrowths(sourceGrowthsNumber, destinationGrowthsNumber) {
+	document.getElementById("hp" + destinationGrowthsNumber).value = document.getElementById("hp" + sourceGrowthsNumber).value;
+	document.getElementById("str" + destinationGrowthsNumber).value = document.getElementById("str" + sourceGrowthsNumber).value;
+	document.getElementById("mag" + destinationGrowthsNumber).value = document.getElementById("mag" + sourceGrowthsNumber).value;
+	document.getElementById("dex" + destinationGrowthsNumber).value = document.getElementById("dex" + sourceGrowthsNumber).value;
+	document.getElementById("spd" + destinationGrowthsNumber).value = document.getElementById("spd" + sourceGrowthsNumber).value;
+	document.getElementById("def" + destinationGrowthsNumber).value = document.getElementById("def" + sourceGrowthsNumber).value;
+	document.getElementById("res" + destinationGrowthsNumber).value = document.getElementById("res" + sourceGrowthsNumber).value;
+	document.getElementById("lck" + destinationGrowthsNumber).value = document.getElementById("lck" + sourceGrowthsNumber).value;
+	document.getElementById("bld" + destinationGrowthsNumber).value = document.getElementById("bld" + sourceGrowthsNumber).value;
+}
