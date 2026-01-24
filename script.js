@@ -106,6 +106,33 @@ function updateStats() {
 	bldincreases = 0;
 	bldbase = +document.getElementById("bldbase").value;
 
+	hppromo1 = +document.getElementById("hppromo1").value;
+	hppromo2 = +document.getElementById("hppromo2").value;
+	
+	strpromo1 = +document.getElementById("strpromo1").value;
+	strpromo2 = +document.getElementById("strpromo2").value;
+	
+	magpromo1 = +document.getElementById("magpromo1").value;
+	magpromo2 = +document.getElementById("magpromo2").value;
+	
+	dexpromo1 = +document.getElementById("dexpromo1").value;
+	dexpromo2 = +document.getElementById("dexpromo2").value;
+	
+	spdpromo1 = +document.getElementById("spdpromo1").value;
+	spdpromo2 = +document.getElementById("spdpromo2").value;
+	
+	defpromo1 = +document.getElementById("defpromo1").value;
+	defpromo2 = +document.getElementById("defpromo2").value;
+	
+	respromo1 = +document.getElementById("respromo1").value;
+	respromo2 = +document.getElementById("respromo2").value;
+	
+	lckpromo1 = +document.getElementById("lckpromo1").value;
+	lckpromo2 = +document.getElementById("lckpromo2").value;
+	
+	bldpromo1 = +document.getElementById("bldpromo1").value;
+	bldpromo2 = +document.getElementById("bldpromo2").value;
+
 	var level = +document.getElementById("level").value;
 	var promotionLevel1 = +document.getElementById("promotionLevel1").value;
 	var promotionLevel2 = +document.getElementById("promotionLevel2").value;
@@ -233,17 +260,25 @@ function statCalc(growth, confidence, increases, arrayLocation) {
 	base = current1DArray[arrayLocation];
 	growth = +document.getElementById(growth).value;
 	confidence = +document.getElementById(confidence).value;
-	/*
-	console.log(increases);
-	console.log(base);
-	console.log(growth);
-	console.log(confidence);
-	*/
+	
+	/* if (increases <= 0) console.log(increases);
+	if (interval <= 0) console.log(interval);
+	if (growth <= 0) console.log(growth);
+	if (confidence <= 0) console.log(confidence); */
+	/* console.log(increases);
+	console.log(interval);
+	console.log(growth); */
+	
 	if (1 - stats.binomialCumulativeValue(increases, interval, growth) > confidence) {
 		//document.getElementById("hpbase").value = hpbase + 1;
+		// if(arrayLocation == 1) console.log(base);
 		current1DArray[arrayLocation] = base + 1;
+		// console.log("-----<<");
 		return increases + 1;
 	}
+
+	// console.log("-----");
+
 	return increases;
 }
 
